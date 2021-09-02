@@ -9,6 +9,7 @@ window.adobeid = {
       redirect_uri: 'https://main--ims-auth-demo--dylandepass.hlx3.page/index.html',
       useLocalStorage: false,
       onAccessToken: function (tokenInformation) {
+            console.log(JSON.stringify(tokenInformation));
             status.textContent = "Status: Logged In";
             token.textContent = `Token: ${tokenInformation}`;
       },

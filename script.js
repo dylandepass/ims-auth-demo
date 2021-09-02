@@ -8,10 +8,11 @@ window.adobeid = {
       environment: 'stg1',
       redirect_uri: 'https://main--ims-auth-demo--dylandepass.hlx3.page/index.html',
       useLocalStorage: false,
-      onAccessToken: function (tokenInformation) {
-            console.log(JSON.stringify(tokenInformation));
+      onAccessToken: function (tokenResponse) {
+            console.log(JSON.stringify(tokenResponse));
+            const response = JSON.parse(tokenResponse);
             status.textContent = "Status: Logged In";
-            token.textContent = `Token: ${tokenInformation}`;
+            token.textContent = `Token: ${response.token}`;
       },
       onReauthAccessToken: function (reauthTokenInformation) {
       },

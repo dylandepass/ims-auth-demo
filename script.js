@@ -17,3 +17,6 @@ window.adobeid = {
       onReady: function(appState) {
       }
 };
+
+const adobeIms = new AdobeIMS();
+adobeIms.initialize();

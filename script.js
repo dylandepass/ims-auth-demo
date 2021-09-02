@@ -1,3 +1,12 @@
+function login() {
+      adobeIMS.signIn();
+}
+
+function logout() {
+      adobeIMS.signOut();
+      status.textContent = "Status: Logged Out";
+}
+
 window.addEventListener('load', function () {
       const status = document.querySelector('.status');
       const token = document.querySelector('.token');
@@ -26,13 +35,4 @@ window.addEventListener('load', function () {
                   console.log('On Ready');
             }
       };
-      
-      function login() {
-            adobeIMS.signIn();
-      }
-      
-      function logout() {
-            adobeIMS.signOut();
-            status.textContent = "Status: Logged Out";
-      }
 })

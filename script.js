@@ -9,7 +9,8 @@ window.adobeid = {
       redirect_uri: 'https://main--ims-auth-demo--dylandepass.hlx3.page/index.html',
       useLocalStorage: false,
       onAccessToken: function (tokenResponse) {
-            token.textContent = `Token: ${adobeIMS.getAccessToken()}`;
+            status.textContent = "Status: Logged In";
+            token.textContent = `Token: ${adobeIMS.getAccessToken().token}`;
       },
       onReauthAccessToken: function (reauthTokenInformation) {
       },
@@ -21,7 +22,7 @@ window.adobeid = {
             status.textContent = "Status: Expired";
       },
       onReady: function(appState) {
-            token.textContent = `Token: ${adobeIMS.getAccessToken()}`;
+            token.textContent = `Token: ${adobeIMS.getAccessToken().token}`;
       }
 };
 

@@ -15,8 +15,6 @@ window.adobeid = {
       onAccessTokenHasExpired: function() {
       },
       onReady: function(appState) {
+            console.log('On Ready')
       }
 };
-
-const adobeIms = new AdobeIMS();
-adobeIms.initialize();

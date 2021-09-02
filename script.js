@@ -1,5 +1,5 @@
 function login() {
-      window.adobeIMS.signIn();
+      adobeIMS.signIn();
 }
 
 function logout() {
@@ -15,7 +15,7 @@ window.adobeid = {
       scope: 'AdobeID,openid',
       locale: 'en_US',
       environment: 'stg1',
-      redirect_uri: 'https://main--ims-auth-demo--dylandepass.hlx3.page/',
+      redirect_uri: 'https://main--ims-auth-demo--dylandepass.hlx3.page/index.html',
       useLocalStorage: false,
       onAccessToken: function (tokenInformation) {
             status.textContent = "Status: Logged In";

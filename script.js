@@ -1,12 +1,3 @@
-function login() {
-      adobeIMS.signIn();
-}
-
-function logout() {
-      adobeIMS.signOut();
-      status.textContent = "Status: Logged Out";
-}
-
 const status = document.querySelector('.status');
 const token = document.querySelector('.token');
 
@@ -19,7 +10,7 @@ window.adobeid = {
       useLocalStorage: false,
       onAccessToken: function (tokenInformation) {
             status.textContent = "Status: Logged In";
-            token.textContent = `Token: ${tokenInformation.token}`;
+            token.textContent = `Token: ${tokenInformation}`;
       },
       onReauthAccessToken: function (reauthTokenInformation) {
       },
@@ -36,3 +27,12 @@ window.adobeid = {
             token.textContent = `Token: ${appState}`;
       }
 };
+
+function login() {
+      adobeIMS.signIn();
+}
+
+function logout() {
+      adobeIMS.signOut();
+      status.textContent = "Status: Logged Out";
+}

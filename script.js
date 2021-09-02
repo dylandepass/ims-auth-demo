@@ -5,7 +5,7 @@ window.adobeid = {
       environment: 'stg1',
       useLocalStorage: false,
       onAccessToken: function (tokenInformation) {
-        document.querySelector('.token').html = JSON.stringify(tokenInformation);
+        document.querySelector('.token').textContent = JSON.stringify(tokenInformation);
       },
       onReauthAccessToken: function (reauthTokenInformation) {
       },
